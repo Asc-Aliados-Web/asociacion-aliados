@@ -26,7 +26,6 @@
     .links a { margin: 10px 0; }
     nav { justify-content: space-between; padding: 0 20px; }
 }
-    <style>
         /* ESTILO GENERAL */
         body {
             background-color: #f9f7f2; /* Blanco hueso */
@@ -160,6 +159,16 @@
         </div>
     </footer>
 <script>
+    function toggleMenu() {
+        var x = document.getElementById("navLinks");
+        if (x.classList.contains("active")) {
+            x.classList.remove("active");
+        } else {
+            x.classList.add("active");
+        }
+    }
+</script>
+    <script>
     function toggleMenu() {
         var x = document.getElementById("navLinks");
         if (x.classList.contains("active")) {
