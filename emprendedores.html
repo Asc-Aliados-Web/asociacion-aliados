@@ -6,6 +6,26 @@
     <title>Emprendedores - Aliados Web</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+          /* Esto oculta las rayas en PC y las muestra en móvil */
+.menu-icon { display: none; font-size: 1.8rem; color: #1a3a5a; }
+
+@media (max-width: 768px) {
+    .menu-icon { display: block; } 
+    .links { 
+        display: none; 
+        flex-direction: column; 
+        position: absolute; 
+        top: 70px; 
+        left: 0; 
+        width: 100%; 
+        background: white; 
+        border-bottom: 4px solid #ff8c00;
+        padding: 20px 0;
+    }
+    .links.active { display: flex; } /* Esta línea hace que se muestre al tocar */
+    .links a { margin: 10px 0; }
+    nav { justify-content: space-between; padding: 0 20px; }
+}
         body { background-color: #f9f7f2; color: #1a3a5a; font-family: 'Segoe UI', sans-serif; margin: 0; padding-top: 80px; }
         
         /* Menú coherente con el resto de la web */
@@ -29,11 +49,14 @@
 
     <nav>
         <a href="index.html" class="logo">Aliados<span>Web</span></a>
-        <div class="links">
+        
+        <div class="menu-icon" onclick="toggleMenu()" style="cursor:pointer;"> <i class="fas fa-bars"></i> </div>
+        
+        <div class="links" id="navLinks">
             <a href="index.html">Inicio</a>
             <a href="asociaciones.html">Asociaciones</a>
             <a href="emprendedores.html">Emprendedores</a>
-            <a href="index.html#blog">Blog</a>
+            <a href="#blog">Blog</a>
         </div>
     </nav>
 
@@ -67,6 +90,15 @@
     <footer>
         <p>&copy; 2026 Aliados Web - <a href="transparencia.html" style="color:#ff8c00; text-decoration:none;">Transparencia</a></p>
     </footer>
-
+<script>
+    function toggleMenu() {
+        var x = document.getElementById("navLinks");
+        if (x.classList.contains("active")) {
+            x.classList.remove("active");
+        } else {
+            x.classList.add("active");
+        }
+    }
+</script>
 </body>
 </html>
