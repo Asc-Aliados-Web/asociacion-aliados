@@ -3,29 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asociaciones - Aliados Web</title>
+    <title>Proyecto - Aliados Web</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-            /* Esto oculta las rayas en PC y las muestra en móvil */
-.menu-icon { display: none; font-size: 1.8rem; color: #1a3a5a; }
+        /* Esto oculta las rayas en PC y las muestra en móvil */
+        .menu-icon { display: none; font-size: 1.8rem; color: #1a3a5a; }
 
-@media (max-width: 768px) {
-    .menu-icon { display: block; } 
-    .links { 
-        display: none; 
-        flex-direction: column; 
-        position: absolute; 
-        top: 70px; 
-        left: 0; 
-        width: 100%; 
-        background: white; 
-        border-bottom: 4px solid #ff8c00;
-        padding: 20px 0;
-    }
-     .links.active { display: flex; } /* Esta línea hace que se muestre al tocar */
-    .links a { margin: 10px 0; }
-    nav { justify-content: space-between; padding: 0 20px; }
-}
+        @media (max-width: 768px) {
+            .menu-icon { display: block; } 
+            .links { 
+                display: none; 
+                flex-direction: column; 
+                position: absolute; 
+                top: 70px; 
+                left: 0; 
+                width: 100%; 
+                background: white; 
+                border-bottom: 4px solid #ff8c00;
+                padding: 20px 0;
+            }
+            .links.active { display: flex; } /* Esta línea hace que se muestre al tocar */
+            .links a { margin: 10px 0; }
+            nav { justify-content: space-between; padding: 0 20px; }
+        }
         body { background-color: #f9f7f2; color: #1a3a5a; font-family: 'Segoe UI', sans-serif; margin: 0; padding-top: 80px; }
         
         /* Mismo menú que la portada */
@@ -48,32 +48,34 @@
         <div class="menu-icon" onclick="toggleMenu()" style="cursor:pointer;"> <i class="fas fa-bars"></i> </div>
         <div class="links" id="navLinks">
             <a href="index.html">Inicio</a>
-            <a href="asociaciones.html">Asociaciones</a>
+            <a href="proyecto.html">Proyecto</a>
             <a href="emprendedores.html">Emprendedores</a>
-            <a href="index.html#blog">Blog</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="blog.html">Blog</a>
         </div>
     </nav>
 
     <div class="header-seccion">
-        <h1>Red de Asociaciones</h1>
-        <p>Fortaleciendo lazos entre entidades para un impacto mayor.</p>
+        <h1>Nuestro Proyecto</h1>
+        <p>Digitalización solidaria para impulsar el éxito de los emprendedores.</p>
     </div>
 
     <div class="container">
         <div class="tarjeta-info">
-            <h2>¿Por qué unirse como asociación?</h2>
-            <p>Aquí puedes explicar qué beneficios obtienen otras asociaciones al colaborar con vosotros. Por ejemplo: intercambio de recursos, visibilidad conjunta o proyectos compartidos.</p>
+            <h2>Misión Social</h2>
+            <p>La Asociación Aliados Web nace con el objetivo de democratizar el acceso al SEO y al diseño web profesional. Nuestro proyecto se centra en ayudar a emprendedores locales a ganar visibilidad en internet.</p>
         </div>
 
         <div class="tarjeta-info">
-            <h2>Nuestros Aliados</h2>
-            <p>Espacio reservado para listar o poner los logos de las asociaciones que ya forman parte de vuestra red.</p>
+            <h2>Impacto y Comunidad</h2>
+            <p>Trabajamos para crear una red de negocios digitalizados que se apoyen mutuamente y apuesten por la transparencia.</p>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2026 Aliados Web - <a href="transparencia.html" style="color:#ff8c00; text-decoration:none;">Transparencia</a></p>
+        <p>&copy; 2026 Aliados Web - <a href="nosotros.html" style="color:#ff8c00; text-decoration:none;">Transparencia</a></p>
     </footer>
+
 <script>
     function toggleMenu() {
         var x = document.getElementById("navLinks");
